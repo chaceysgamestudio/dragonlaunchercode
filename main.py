@@ -1,6 +1,5 @@
 import os
 import sys
-import requests
 import zipfile
 import shutil
 import threading
@@ -8,7 +7,6 @@ import tkinter as tk
 from tkinter import messagebox
 from tkinter import ttk
 from datetime import datetime
-import winsound
 
 # -------------------------
 # file locations (where everything lives)
@@ -123,7 +121,6 @@ def make_instance(name):
 
     if os.path.exists(path):
         messagebox.showerror("Error", "That instance already exists")
-        winsound.PlaySound("SystemHand", winsound.SND_ALIAS)
         return None
 
 
@@ -164,7 +161,6 @@ def launch(name):
 
 
 def delete(name):
-    winsound.PlaySound("SystemHand", winsound.SND_ALIAS)
     path = os.path.join(INSTANCES_DIR, name)
 
     if messagebox.askyesno("Delete", f"Delete '{name}'?"):
@@ -343,7 +339,6 @@ def refresh():
 # -------------------------
 # start app
 # -------------------------
-winsound.PlaySound("SystemDefault", winsound.SND_ALIAS)
 log("Launcher started")
 refresh()
 root.mainloop()
