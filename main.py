@@ -24,8 +24,8 @@ def load_instance_icon(inst_path):
 # -------------------------
 # paths
 # -------------------------
-
-BASE_DIR = os.path.join(os.getenv("APPDATA"), "modragon", "games", "Half-Dragon")
+TEMPLATE = ["bin", "data", "doc", "mods", "world"]
+BASE_DIR = os.path.join(os.getenv("APPDATA"), "halfdragonlauncher", "games", "Half-Dragon")
 INSTANCES_DIR = os.path.join(BASE_DIR, "instances")
 LOG_FILE = os.path.join(BASE_DIR, "launcher.log")
 STATE_FILE = os.path.join(BASE_DIR, "state.json")
@@ -33,8 +33,12 @@ STATE_FILE = os.path.join(BASE_DIR, "state.json")
 os.makedirs(INSTANCES_DIR, exist_ok=True)
 
 TEMPLATE = ["bin", "data", "doc", "mods", "world"]
-
+# |
+# |
+# \/
 DEFAULT_DOWNLOAD = "https://github.com/chaceysgamestudio/dragonlauncher/releases/download/releases/Half-Dragon-Pre_Alpha-Build_0.14.0.1.zip"
+# this is the default download path
+#hey dosgamer can you update it when you make a update
 
 META_FILE = "meta.json"
 
@@ -63,6 +67,7 @@ settings = {
 # -------------------------
 
 ctk.set_appearance_mode("dark")
+#weird it was green before...
 ctk.set_default_color_theme("dark-blue")
 
 # -------------------------
@@ -460,6 +465,9 @@ def refresh():
         ctk.CTkButton(card, text="Wipe Instances", fg_color="#ef4444", command=wipe).pack(pady=5, padx=15, fill="x")
 
         ctk.CTkButton(frame, text="Back", command=go_home).pack(pady=10)
+
+        ctk.CTkLabel(frame, text="this project is open source", font=("Segoe UI", 22, "bold")).pack(pady=20)
+        ctk.CTkLabel(frame, text="https://github.com/chaceysgamestudio/dragonlauncher", font=("Segoe UI", 14, "bold")).pack(pady=10)
 
     log("UI refreshed")
 # -------------------------
