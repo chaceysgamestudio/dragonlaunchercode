@@ -1,10 +1,14 @@
-<img src="[logo.png](https://img.itch.zone/aW1nLzI3MTQ1OTUyLnBuZw==/315x250%23c/NYCltK.png)" width="700">
+<img src="https://img.itch.zone/aW1nLzI3MTQ1OTUyLnBuZw==/315x250%23c/NYCltK.png" width="700">
 
-# DragonLauncher
+A modern launcher built for the indie RPG Half Dragon by DosGamer6601.
+DragonLauncher handles installs, updates, and multiple game instances without the usual launcher sludge.
 
-A modern launcher for half dragon
+Built by ChaceysGames for players who just want to launch the game and get straight into the weird ruined-corporation dragon chaos.
 
-## Features
-- automatic updates
-- instance management
-  
+Features
+Automatic game updates
+Simple instance management
+Clean lightweight UI
+Easy game launching
+Open source
+Designed specifically for Half Dragon
