@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>How to Join</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #1a1a2e, #0f0f14);
+    color: white;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 1100px;
+    padding: 40px 20px;
+  }
+
+  .panel {
+    display: flex;
+    gap: 30px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
+
+  .left {
+    width: 60%;
+  }
+
+  .right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  h1 {
+    margin: 0 0 15px 0;
+    font-size: 36px;
+  }
+
+  ol {
+    color: #d0d0d0;
+    line-height: 1.7;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 12px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.2s;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    color: white;
+    box-shadow: 0 8px 20px rgba(108,92,231,0.3);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: rgba(255,255,255,0.08);
+    color: white;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255,255,255,0.15);
+  }
+
+  @media (max-width: 800px) {
+    .panel {
+      flex-direction: column;
+    }
+
+    .left, .right {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="panel">
+
+    <div class="left">
+      <h1>How do I join?</h1>
+
+      <ol>
+        <li>The code is open source on GitHub</li>
+        <li>Find a feature or bug fix</li>
+        <li>Code it</li>
+        <li>Commit it</li>
+        <li>Email <b>chaceysgamesyt@gmail.com</b> so I can review and publish it</li>
+      </ol>
+    </div>
+
+    <div class="right">
+      <a class="btn btn-primary" href="https://github.com/chaceysgamestudio/dragonlauncher" target="_blank">
+        Source Code
+      </a>
+
+      <a class="btn btn-secondary" href="https://chaceysgames.itch.io/half-dragon-launcher" target="_blank">
+        Itch.io Page
+      </a>
+
+      <a class="btn btn-secondary" href="index.html">
+        Go Back
+      </a>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
