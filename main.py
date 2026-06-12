@@ -35,7 +35,7 @@ STATE_FILE = os.path.join(BASE_DIR, "state.json")
 
 os.makedirs(INSTANCES_DIR, exist_ok=True)
 
-DEFAULT_DOWNLOAD = "https://github.com/chaceysgamestudio/dragonlauncher/releases/download/releases/Half-Dragon-Pre_Alpha-Build_0.14.0.1.zip"
+DEFAULT_DOWNLOAD = "https://github.com/chaceysgamestudio/dragonlaunchercode/releases/download/releases/Half-Dragon-Pre_Alpha-Build_0.14.0.1.zip"
 META_FILE = "meta.json"
 
 # -------------------------
@@ -496,8 +496,9 @@ def refresh():
         name_var = ctk.StringVar()
 
         ctk.CTkLabel(frame, text="Create New Instance", font=("Segoe UI", 22, "bold")).pack(pady=20)
+        ctk.CTkLabel(frame, text="called?", font=("Segoe UI", 22, "bold")).pack(pady=10)
 
-        card = ctk.CTkFrame(frame, fg_color="#111111", corner_radius=12, border_width=1, border_color="#27272a")
+        card = ctk.CTkFrame(frame, fg_color="#111111", corner_radius=15, border_width=2, border_color="#27272a")
         card.pack(pady=20, padx=120, fill="x")
 
         entry = ctk.CTkEntry(card, textvariable=name_var, placeholder_text="Enter unique instance name...")
@@ -512,7 +513,7 @@ def refresh():
         def create():
             name = name_var.get().strip()
             if not name:
-                status.configure(text="Name field cannot be blank.")
+                status.configure(text="Name field can't be blank.")
                 return
 
             name = "".join([c for c in name if c.isalnum() or c in (' ', '-', '_')]).strip()
@@ -588,7 +589,7 @@ def refresh():
         ctk.CTkButton(frame, text="back", fg_color="#27272a", hover_color="#3f3f46", command=go_home).pack(pady=10)
 
         ctk.CTkLabel(frame, text="this project is open source", font=("Segoe UI", 14, "italic"), text_color="#71717a").pack(pady=(10, 0))
-        ctk.CTkLabel(frame, text="https://github.com/chaceysgamestudio/dragonlauncher", font=("Segoe UI", 12), text_color=ACCENT).pack()
+        ctk.CTkLabel(frame, text="https://github.com/chaceysgamestudio/dragonlaunchercode", font=("Segoe UI", 12), text_color=ACCENT).pack()
 
     log("UI refreshed")
 
@@ -609,7 +610,9 @@ if os.path.exists(icon_path):
 sidebar = ctk.CTkFrame(root, width=240, fg_color="#09090b", border_width=1, border_color="#18181b")
 sidebar.pack(side="left", fill="y")
 
-ctk.CTkLabel(sidebar, text="HALF DRAGON", font=("Segoe UI", 22, "bold"), text_color="#f4f4f5").pack(pady=25)
+ctk.CTkLabel(sidebar, text="HALF DRAGON", font=("Segoe UI", 22, "bold"), text_color="#f4f4f5").pack(pady=5)
+
+ctk.CTkLabel(sidebar, text="COPPERCUBE EDITION", font=("Segoe UI", 14, "bold"), text_color="#ea6d62").pack(pady=0)
 
 home_btn = ctk.CTkButton(sidebar, text="Home", fg_color="transparent", text_color="#a1a1aa", hover_color="#18181b", anchor="w", font=("Segoe UI", 14), command=go_home)
 home_btn.pack(fill="x", padx=15, pady=4)
